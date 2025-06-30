@@ -1,0 +1,156 @@
+h1 {
+    padding-top: 80px;
+}
+
+.table.table-bordered {
+    color: white; 
+}
+
+.mContent {
+    background-color: rgba(0,0,0,.65);
+    border-radius: 3px;
+    padding-top: 90px;
+    padding: 50px;
+    max-width: 1400px;  
+    margin: 0 100px; 
+}
+
+/* Flipping effect */
+.flip {
+    position: relative;
+    width: 220px; 
+    height: 220px; 
+    perspective: 1000px;
+}
+
+.flip .front,
+.flip .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+}
+
+.flip .front {
+    transform: rotateY(0deg);
+}
+
+.flip .back {
+    transform: rotateY(180deg);
+    opacity: 0;
+}
+
+.flip:hover .front {
+    transform: rotateY(180deg);
+}
+
+.flip:hover .back {
+    transform: rotateY(360deg);
+    opacity: 1;
+}
+
+#flipTut {
+    font-size: 14px;
+}
+
+
+/* all.html */
+
+#fetchContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.eachCharacter {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+#clickableMap_front img, #clickableMap_verso img {
+    width: 70%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+    padding: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+    #clickableMap_front img, #clickableMap_verso img {
+        width: 95%; 
+    }
+}
+
+@media only screen and (max-width: 1230px) {
+    .mContent {
+        margin: 0;
+        padding: 50px 0;
+    }
+}
+
+#pText {
+    text-align: center;
+    font-family: 'JinghuaOldSong', 'Hiragino Kaku Gothic Pro', '微軟正黑體', '蘋果儷中黑', Helvetica, Arial, sans-serif;
+}
+
+h2 {
+    font-family: 'JinghuaOldSong', 'Hiragino Kaku Gothic Pro', '微軟正黑體', '蘋果儷中黑', Helvetica, Arial, sans-serif;
+    font-size: 40px;
+    padding-bottom: 10px;
+}
+
+.tooltipp {
+    position: relative;
+    display: inline-block;
+    color: #d3a402;
+    cursor: copy;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 350px;
+    max-width: 90vw;
+    background-color: rgb(221, 208, 132);
+    color: #000000;
+    text-align: left;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the tooltip text */
+    left: 50%;
+    margin-left: -100px; /* Center the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 16px;
+}
+
+.tooltipp:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+ol {
+    font-size: 16px;
+    list-style: none;
+    counter-reset: num;
+    margin-left: -40px;
+}
+
+ol li {
+    counter-increment: num;
+}
+
+/* make the references footnote number without . and smaller */
+ol li::before {
+    content: counter(num);
+    font-size: 11px;
+}
+
+.credit p {
+        margin-bottom: 3px;
+}

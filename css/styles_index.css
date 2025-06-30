@@ -1,0 +1,139 @@
+body {
+    line-height: 1.6;
+    font-size: 20px;
+    font-family: "Tinos", serif;
+    color: #d8d7d3;
+    height: 100%;
+    margin: 0;
+    background-color: black;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+body:before {
+    content: " ";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background-image: url("../images/map/b626738_s.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -999;
+}
+
+.container {
+    background-color: transparent;
+}
+
+.left-column {
+    background-color: transparent;
+    flex: 1;
+    padding: 10px;
+}
+.right-column {
+    background-color: transparent;
+    flex: 1;
+    padding: 10px;
+}
+.button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #d4e3f3;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+.card {
+    border-radius: 5px;
+    border: solid 1px #6e654d;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+    margin: 20px 0px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.image-box {
+    border-radius: 5px;
+    box-shadow: inset 0px -100px 60px rgba(0, 0, 0, 0.5);
+}
+
+.card .card__proj {
+    background: url("../images/staticPage/home_ProjectPage.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card .card__imgAR {
+    background: url("../images/staticPage/home_imgAR.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 70% center;
+}
+
+.card .card__faceAR {
+    background: url("../images/staticPage/home_faceAR.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 80% center;
+}
+
+.card .card__characterList {
+    background: url("../images/staticPage/home_List.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card .image-box .text-container {
+    padding: 20px;
+    margin-top: 300px;
+}
+
+.card__text {
+    font-size: 32px;
+    font-weight: 900;
+    color: #ffffff;
+    text-align: left;
+}
+
+table {
+    margin: 25px 0;
+}
+
+td {
+    vertical-align: top;
+}
+
+/* Set the first column to auto width */
+td:first-child, th:first-child {
+    white-space: nowrap; 
+}
+
+/* language toggle */
+
+.chi, .eng {
+    cursor: pointer;
+}

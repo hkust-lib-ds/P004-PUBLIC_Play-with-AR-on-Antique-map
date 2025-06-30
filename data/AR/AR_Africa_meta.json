@@ -1,0 +1,89 @@
+[
+    {
+      "id": "S2",
+      "name": "Ham / Cam (含)",
+      "place": "Africa (非洲)",
+      "characteristic": "The third son of Noah (挪亞的第三個兒子)",
+      "targetIndex": 0
+    }
+    ,
+    {
+      "id": "M02",
+      "name": "Gorgades",
+      "place": "Africa (非洲)",
+      "characteristic": "Hairy (多毛)",
+      "targetIndex": 1
+    }
+    ,
+    {
+      "id": "M05",
+      "name": "Machlyes (馬克利族)",
+      "place": "Africa (非洲)",
+      "characteristic": "Hermaphrodites, with both male and female features (雌雄同體, 具有男性和女性特徵)",
+      "targetIndex": 2
+    }
+    ,
+    {
+      "id": "M06",
+      "name": "Nisitae (尼西泰)",
+      "place": "Africa (非洲)",
+      "characteristic": "Four-eyed (四眼)",
+      "targetIndex": 3
+    }
+    ,
+    {
+      "id": "M08",
+      "name": "Cynocephaly (犬首人)",
+      "place": "Africa, Asia, Europe (非洲、亞洲、歐洲)",
+      "characteristic": "Dog-headed (狗頭人身)",
+      "targetIndex": 4
+    }
+    ,
+    {
+      "id": "M10",
+      "name": "Akephaloi / Blemmyes (無首族 / 布勒米耶族)",
+      "place": "Africa, Asia (非洲、亞洲)",
+      "characteristic": "Headlessd (無頭)",
+      "targetIndex": 5
+    }
+    ,
+    {
+      "id": "M12",
+      "name": "Amazons (亞馬遜族)",
+      "place": "Anywhere (世界各地)",
+      "characteristic": "Androgynous or double-sexed, Burnt right chest (雌雄同體或雙性特徵, 燒毀的右胸)",
+      "targetIndex": 6
+    }
+    ,
+    {
+      "id": "M13",
+      "name": "Monopod (獨足族)",
+      "place": "Africa, Asia (非洲、亞洲)",
+      "characteristic": "Single large foot, Hairy body (單隻巨大的腳，全身長滿濃密的毛發)",
+      "targetIndex": 7
+    }
+    ,
+    {
+      "id": "M16",
+      "name": "Amyctyrae (阿米克特雷族)",
+      "place": "Africa (非洲)",
+      "characteristic": "Lip-plated (唇盤)",
+      "targetIndex": 8
+    }
+    ,
+    {
+      "id": "M19",
+      "name": "One-legged hunter (獨腳獵人)",
+      "place": "Africa (非洲)",
+      "characteristic": "One strong leg (一條強壯的腿)",
+      "targetIndex": 9
+    }
+    ,
+    {
+      "id": "M21",
+      "name": "Pygmies (矮人族 / 俾格米人)",
+      "place": "Africa, Asia (非洲、亞洲)",
+      "characteristic": "Short stature (身材矮小)",
+      "targetIndex": 10
+    }
+  ]

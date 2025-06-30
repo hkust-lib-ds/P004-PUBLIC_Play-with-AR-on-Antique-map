@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,  user-scalable=no"
+        />
+
+        <title>
+            Tales from a 1493 World Map: Playing with Augmented Reality (AR) | HKUST Library Digital Scholarship DS CoLab Project
+        </title>
+
+        <meta
+            name="description"
+            content="This project brings a 1493 World map in the HKUST Library's Special Collections to life through Augmented Reality (AR) technology. Our team has turned this historical artifact into an interactive experience, allowing you to uncover its captivating stories and secrets. We have recreated 2D and 3D objects for the characters on this map, inspiring you to learn more about their tales."
+        />
+        <meta
+            name="keywords"
+            content="AR, Augmented Reality, free AR tool, MindAR, Antique Map, Map, Secunda etas mundi, Digital Scholarship, Library, Hong Kong, HK"
+        />
+
+        <meta property="og:title" content="Tales from a 1493 World Map: Playing with Augmented Reality (AR) | HKUST Library Digital Scholarship DS CoLab Project" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://library.hkust.edu.hk/ds/project/p004/map" />
+        <meta property="og:image" content="https://library.hkust.edu.hk/ds/project/p004/map/images/preview_DS-P004.png" />
+        <meta property="og:description" content="This project brings a 1493 World map in the HKUST Library's Special Collections to life through Augmented Reality (AR) technology. Our team has turned this historical artifact into an interactive experience, allowing you to uncover its captivating stories and secrets. We have recreated 2D and 3D objects for the characters on this map, inspiring you to learn more about their tales." />
+
+        <link rel="stylesheet" href="css/lib/bootstrap.min.css" />
+        <link rel="shortcut icon" href="images/favicon/HKUST.ico" />
+        <link
+            rel="apple-touch-icon-precomposed"
+            href="images/favicon/HKUST-lib.png"
+        />
+
+        <link rel="stylesheet" href="css/lib/font-awesome.min.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css?family=Muli:200,400,500,600,700,800"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Estonia&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="css/header-footer.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/styles_index.css" />
+        <script src="js/lib/jquery.min.js"></script>
+        <script>
+            $(function () {
+                $("#header").load("load/header.html");
+                $("#footer").load("load/footer.html");
+            });
+        </script>
+
+
+        <script>
+            $(function () {
+                // Language toggle 
+                $('.chi, .eng').click(function () {
+                    if ($(this).hasClass('chi')) {
+                        $('.english-version').show();
+                        $('.chinese-version').hide();
+                    } else {
+                        $('.chinese-version').show();
+                        $('.english-version').hide();
+                    }
+                });
+
+                // Set initial state
+                if ($('.chinese-version').is(':visible')) {
+                    $('.english-version').hide();
+                    $('.chinese-version').show();
+                } else {
+                    $('.chinese-version').hide();
+                    $('.english-version').show();
+                }
+            });
+        </script>
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WT6WLZD863"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-WT6WLZD863');
+        </script>
+
+        <script type="text/javascript">
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "s4dj817cvn");
+        </script>
+
+    </head>
+
+    <body>
+        
+        <div id="header"></div>
+
+        <div style="position: absolute; top: 60px; right: 60px;">
+            <i style="font-size:24px; padding-right:5px;" class="fa fa-language"></i>
+                <span class="chi">ENG</span> | 
+                <span class="eng">中文</span>
+        </div>
+        
+        <div class="english-version">
+            <div class="container" style="display:block;">
+                <h1>Tales from a 1493 World Map: <br/>Playing with AR</h1>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                <div class="col-xs-12" style="text-align: center"></div>
+
+                <!-- Left Column -->
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="section" id="preview">
+                        <div>
+                            <a
+                                href="https://library.hkust.edu.hk/ds/project/p004/"
+                                target="_blank"
+                            >
+                                <div class="card">
+                                    <div
+                                        class="image-box card__proj lazy"
+                                        data-bg="images/lazy.png"
+                                    >
+                                        <div class="text-container">
+                                            <span class="card__text"
+                                                >Project Page</span
+                                            >
+                                            <span
+                                                style="
+                                                    display: block;
+                                                    font-size: 16px;
+                                                    color: #fff;
+                                                "
+                                                >Find out more about the behind-the-scenes making of the project!</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div>
+                            <a href="AR.html" target="_blank" id="AR">
+                                <div class="card">
+                                    <div
+                                        class="image-box card__imgAR lazy"
+                                        data-bg="images/lazy.png"
+                                    >
+                                        <div class="text-container">
+                                            <span class="card__text"
+                                                >Image Tracking in AR</span
+                                            >
+                                            <span
+                                                style="
+                                                    display: block;
+                                                    font-size: 16px;
+                                                    color: #fff;
+                                                "
+                                                >Point your camera at specific parts of the map to discover drawings of the three sons of Noah and the mythical creatures, illustrated by our students. Learn their stories, continent by continent!</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div>
+                            <a
+                                href="FaceDeco.html"
+                                target="_blank"
+                                id="FaceDecoration"
+                            >
+                                <div class="card">
+                                    <div
+                                        class="image-box card__faceAR lazy"
+                                        data-bg="images/lazy.png"
+                                    >
+                                        <div class="text-container">
+                                            <span class="card__text"
+                                                >Face Tracking in AR</span
+                                            >
+                                            <span
+                                                style="
+                                                    display: block;
+                                                    font-size: 16px;
+                                                    color: #fff;
+                                                "
+                                                >Turn your camera on yourself and have fun trying out the cool traits of the map's characters! You can even cosplay as a blowing head for extra fun!</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div>
+                            <a
+                                href="all.html"
+                                id="List of all characters in this map"
+                            >
+                                <div class="card">
+                                    <div
+                                        class="image-box card__characterList lazy"
+                                        data-bg="images/lazy.png"
+                                    >
+                                        <div class="text-container">
+                                            <span class="card__text"
+                                                >List of Creatures</span
+                                            >
+                                            <span
+                                                style="
+                                                    display: block;
+                                                    font-size: 16px;
+                                                    color: #fff;
+                                                "
+                                                >Read the tales of the mythical creatures in this map here.</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div
+                    class="col-xs-12 col-sm-12 col-md-8 col-lg-8"
+                    style="
+                        background-color: rgba(0, 0, 0, 0.55);
+                        padding: 35px;
+                        margin-top: 20px;
+                        border: solid 1px #6e654d;
+                    "
+                >
+                    <div class="section">
+                        <p>
+                            This project, funded by a generous donation from Dr. Ko Pui Shuen, is a collaboration with HKUST Library staff and undergraduate students from diverse science and technology disciplines. Students contributed as web developers, digital illustrators and storytellers to bring <a target="_blank" href="https://doi.org/10.14711/spcol/b626738">a 1493 world map</a> from the Library's Special Collections to life through Augmented Reality (AR) technology. 
+                        </p>    
+                        <p>
+                            By recreating 2D and 3D visualizations of legendary characters depicted on the map, our team seeks to transform this historical artifact into an immersive, interactive experience.  We invite you to explore the students’ creative designs and discover the fascinating stories and secrets hidden within this remarkable map. 
+                        </p>
+                    </div>
+
+                    <!-- About the Map Section -->
+                    <div class="section">
+                            <h2>About the Map</h2>
+                            <a
+                                target="_blank"
+                                href="https://doi.org/10.14711/spcol/b626738"
+                                ><img src="images/map/b626738_s.png" width="90%"
+                            /></a>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>Map Title: &nbsp;</td>
+                                        <td>
+                                            <a
+                                                target="_blank"
+                                                href="https://doi.org/10.14711/spcol/b626738"
+                                                >Secunda etas Mundi = Second Age of
+                                                the World</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Author:</td>
+                                        <td>
+                                            Hartmann Schedel (1449 - 1515)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Details:</td>
+                                        <td>
+                                            Two pages excerpted from <a href="https://archive.org/details/LATNURE_DBS_HS/page/n91/mode/2up" target="_blank"><i>The Nuremberg Chronicle</i></a>. <a href="https://lbezone.hkust.edu.hk/rse/wp-content/plugins/wp-imagezoom/zoom.php?id=FBn3d" target="_blank">Folium XII</a> and the map on the following page, <a href="https://lbezone.hkust.edu.hk/rse/wp-content/plugins/wp-imagezoom/zoom.php?id=LejJz" target="_blank">Foliu[m] XIII</a>.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <p>
+                                This world map appeared in the <a href="https://archive.org/details/LATNURE_DBS_HS/page/n91/mode/2up" target="_blank"><i>The Nuremberg Chronicle</i></a>, a heavily illustrated encyclopaedia by the 15th-century German cartographer Hartmann Schedel, published over 500 years ago<sup>1,2</sup>. This project heavily relies on the English translation by Kosta Hadavas<sup>3</sup>.
+                            </p>
+                            <p>
+                                This map shows “The Second Age of the World” (out of 6), the stage between Noah’s Flood and the birth of Abraham<sup>4</sup>. These ages were a periodization of world history, common in Christian Europe for the previous 1,000 years, after having been first written about by Augustine of Hippo<sup>5</sup> (354-430 CE).
+                            </p>
+
+                            <p>
+                                This map is a remarkable example of late medieval cartography. It combines knowledge from the Greek geographer Claudius Ptolemy with visual references from religion and  mythology<sup>6</sup>, showing “21 monsters and mythical creatures in a series of images which merge the myths of the Arab and Greek worlds with the fabulous beasts of the West.”<sup>7</sup> The Chronicle may have also had contributions from Martin Behaim<sup>8</sup> who made the <a href="https://globus1492.gnm.de/en" target="_blank">first terrestrial globe of 1492</a><sup>9</sup>.
+                            </p>
+
+                            <p>There are three types of characters on the map, taken from the <a href="https://lbezone.hkust.edu.hk/rse/wp-content/plugins/wp-imagezoom/zoom.php?id=FBn3d" target="_blank">verso</a> and <a href="https://lbezone.hkust.edu.hk/rse/wp-content/plugins/wp-imagezoom/zoom.php?id=LejJz" target="_blank">front page</a> of the map in HKUST Library’s collection<sup>11</sup>:</p>
+                            <ul>
+                                <li>
+                                    <strong style="color: #c7b996"
+                                        >Sons of Noah</strong
+                                    >, representing the three continents of
+                                    <strong style="color: #c7b996">Africa</strong>,
+                                    <strong style="color: #c7b996">Asia</strong>,
+                                    and
+                                    <strong style="color: #c7b996">Europe</strong>.
+                                </li>
+                                <li>
+                                    <strong style="color: #c7b996"
+                                        >Mythical Creatures</strong
+                                    >, which can be associated with at least one of the continents.
+                                </li>
+                                <li>
+                                    <strong style="color: #c7b996"
+                                        >Blowing Heads</strong
+                                    >, each representing a type of wind.
+                                </li>
+                            </ul>
+
+                            <br/>
+                            <h2>References</h2>
+                            <div class="footnotes">
+                                <p class="footnote"><sup>1</sup>Magdalen College. “The Nuremberg Chronicle: A History of the World.” Accessed May 30, 2025. https://www.magd.ox.ac.uk/blog/the-nuremberg-chronicle-a-history-of-the-world/ .</p>
+                                <p class="footnote"><sup>2</sup>“Nuremberg Chronicle to the Collection | University of Pittsburgh Library System.” Accessed May 30, 2025. https://library.pitt.edu/nuremberg-chronicle .</p>
+                                <p class="footnote"><sup>3</sup>Schedel, Hartmann, <i>First Edition of the Nuremberg Chronicle, being the being the Liber chronicarum of Dr. Hartmann Schedel.</i> Translated by Kosta Hadavas. University of Wisconsin-Madison Libraries, 2023, 67-71. Accessed May 30, 2025. https://search.library.wisc.edu/digital/A3SXNV3NHBQLFQ8J .</p>
+                                <p class="footnote"><sup>4</sup>Schedel, Hartmann, Michael Wolgemut, Wilhelm Pleydenwurff, Stephan Füssel, and Herzogin Anna Amalia Bibliothek. <i>Chronicle of the world : the complete and annotated Nuremberg chronicle of 1493.</i> Edited by Stephan Füssel. Köln: Taschen, 2001, p. 7. https://lbdiscover.hkust.edu.hk/bib/991002445149703412 .</p>
+                                <p class="footnote"><sup>5</sup>“Six Ages of the World.” In <i>Wikipedia</i>, January 26, 2024. https://en.wikipedia.org/w/index.php?title=Six_Ages_of_the_World&oldid=1199322681 . </p>
+                                <p class="footnote"><sup>6</sup>Rose, Finn. “The Nuremberg Chronicle World Map.” ArcGIS StoryMaps, October 14, 2022. https://storymaps.arcgis.com/stories/11b41beef4ce4312831429c6b9e6de9c .</p>
+                                <p class="footnote"><sup>7</sup>Schedel, Hartmann, Michael Wolgemut, Wilhelm Pleydenwurff, Stephan Füssel, and Herzogin Anna Amalia Bibliothek. <i>Chronicle of the world : the complete and annotated Nuremberg chronicle of 1493.</i> Edited by Stephan Füssel. Köln: Taschen, 2001, p. 636. https://lbdiscover.hkust.edu.hk/bib/991002445149703412 .</p>
+                                <p class="footnote"><sup>8</sup>Barry Lawrence Ruderman Antique Maps Inc., description of a Latin edition of the Nuremberg Chronicle, n.d., accessed May 30, 2025, https://www.raremaps.com/gallery/detail/103824/nuremberg-chronicle-liber-chronicarum-registrum-huius-ope-schedel .</p>
+                                <p class="footnote"><sup>9</sup>Germanisches National Museum. “Digital Story – Globe 1492. Accessed May 30, 2025. https://globus1492.gnm.de/en . </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chinese-version" style="display: none;">
+            <div class="container" style="display:block;">
+                <h1 style="line-height:1.3; font-family: 'JinghuaOldSong', 'Hiragino Kaku Gothic Pro', '微軟正黑體', '蘋果儷中黑', Helvetica, Arial, sans-serif;">1493年世界地圖的故事：<br/>AR互動體驗</h1>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                <div class="col-xs-12" style="text-align: center"></div>
+
+                <!-- Left Column -->
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <!-- Buttons and AR Features Section -->
+                    <div class="section" id="preview">
+                        <div>
+                            <a
+                                href="https://library.hkust.edu.hk/ds/project/p004/"
+                                target="_blank"
+                            >
+                                <div class="card">
+                                    <div
+                                        class="image-box card__proj lazy"
+                                        data-bg="images/lazy.png"
+                                    >
+                                        <div class="text-container">
+                                            <span class="card__text"
+                                                >項目概覽</span
+                                            >
+                                            <span
+                                                style="
+                                                    display: block;
+                                                    font-size: 16px;
+                                                    color: #fff;
+                                                "
+                                                >了解更多關於製作這個項目的幕後故事！</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div>
+                            <a href="AR.html" target="_blank" id="AR">
+                                <div class="card">
+                                    <div
+                                        class="image-box card__imgAR lazy"
+                                        data-bg="images/lazy.png"
+                                    >
+                                        <div class="text-container">
+                                            <span class="card__text"
+                                                >AR圖像追蹤</span
+                                            >
+                                            <span
+                                                style="
+                                                    display: block;
+                                                    font-size: 16px;
+                                                    color: #fff;
+                                                "
+                                                >將相機鏡頭對準地圖的生物，即可看到由學生們所繪製的版本，並逐一了解他們的故事</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div>
+                            <a
+                                href="FaceDeco.html"
+                                target="_blank"
+                                id="FaceDecoration"
+                            >
+                                <div class="card">
+                                    <div
+                                        class="image-box card__faceAR lazy"
+                                        data-bg="images/lazy.png"
+                                    >
+                                        <div class="text-container">
+                                            <span class="card__text"
+                                                >AR臉部追蹤</span
+                                            >
+                                            <span
+                                                style="
+                                                    display: block;
+                                                    font-size: 16px;
+                                                    color: #fff;
+                                                "
+                                                >將相機鏡頭對準自己，讓地圖生物的特色部位疊加在你的臉上！</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div>
+                            <a
+                                href="all.html"
+                                id="List of all characters in this map"
+                            >
+                                <div class="card">
+                                    <div
+                                        class="image-box card__characterList lazy"
+                                        data-bg="images/lazy.png"
+                                    >
+                                        <div class="text-container">
+                                            <span class="card__text"
+                                                >生物列表</span
+                                            >
+                                            <span
+                                                style="
+                                                    display: block;
+                                                    font-size: 16px;
+                                                    color: #fff;
+                                                "
+                                                >閱讀這張地圖中每個神話生物的故事</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div
+                    class="col-xs-12 col-sm-12 col-md-8 col-lg-8"
+                    style="
+                        background-color: rgba(0, 0, 0, 0.55);
+                        padding: 35px;
+                        margin-top: 20px;
+                        border: solid 1px #6e654d;
+                    "
+                >
+                    <div class="section">
+                        <p>
+                            本項目獲高佩璇博士慷慨捐助，由香港科技大學圖書館職員與來自不同科技學科的科大本科生合作共同完成。在此項目中，科大學生以網頁開發師、數位插畫師及故事敘述者的身份參與，利用擴增實境（Augmented Reality / AR）技術，將香港科技大學圖書館特藏中<a
+                                target="_blank"
+                                href="https://doi.org/10.14711/spcol/b626738"
+                                >1493年出版的《紐倫堡編年史》「第二期世界」地圖</a>重新演繹，將數位資訊與真實世界整合，創造沉浸式的擴增實境，讓使用者能夠更直觀地探索地圖的歷史及細節。我們透過繪圖、三維立體建模以及程式開發，力圖用現代技術將古地圖栩栩如生，並將歷史地圖知識融入增實境之中，創造互動體驗。<br/><br/>
+                        </p>
+                    </div>
+
+                    <!-- About the Map Section -->
+                    <div class="section">
+                            <h2 style="font-size: 42px; line-height:1.3; font-family: 'JinghuaOldSong', 'Hiragino Kaku Gothic Pro', '微軟正黑體', '蘋果儷中黑', Helvetica, Arial, sans-serif;">地圖資料</h2>
+                            <a
+                                target="_blank"
+                                href="https://doi.org/10.14711/spcol/b626738"
+                                ><img src="images/map/b626738_s.png" width="90%"
+                            /></a>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>標題：</td>
+                                        <td>
+                                            <a
+                                                target="_blank"
+                                                href="https://doi.org/10.14711/spcol/b626738"
+                                                >Secunda etas Mundi = 世界的第二個時代</a
+                                            >
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>製圖者：</td>
+                                        <td>
+                                            哈特曼·謝德爾（Hartmann Schedel, 1449-1515）
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>詳情：</td>
+                                        <td>
+                                            摘自<a href="https://archive.org/details/LATNURE_DBS_HS/page/n91/mode/2up" target="_blank">《紐倫堡編年史》（Nuremberg Chronicle）</a>的兩頁。<a href="https://lbezone.hkust.edu.hk/rse/wp-content/plugins/wp-imagezoom/zoom.php?id=FBn3d" target="_blank">第十二頁（Folium XII）</a>及隨後<a href="https://lbezone.hkust.edu.hk/rse/wp-content/plugins/wp-imagezoom/zoom.php?id=LejJz" target="_blank">第十三頁（Foliu[m] XIII）</a>的地圖
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <p>
+                                這幅世界地圖出自500多年前出版的<a href="https://archive.org/details/LATNURE_DBS_HS/page/n91/mode/2up" target="_blank">《紐倫堡編年史》</a>，由15世紀德國製圖師哈特曼·謝德爾（Hartmann Schedel）編纂，是一部插圖豐富的百科全書<sup>1,2</sup>。本項目主要參考了科斯塔·哈達瓦斯（Kosta Hadavas）的英文譯本<sup>3</sup>。 
+                            </p>
+                            <p>
+                                這張地圖顯示了世界的六個時代的「第二紀元」，即諾亞（Noah）洪水與亞伯拉罕（Abraham）<sup>4</sup>誕生之間的時期。這種紀元劃分源自希波的奧古斯丁（Augustine of Hippo）<sup>5</sup>（354-430年），在基督教歐洲盛行千年。 
+                            </p>
+
+                            <p>
+                                這幅地圖可以說是中世紀晚期地圖學的典范之作，此圖融合了希臘地理學家克勞狄烏斯·托勒密（Claudius Ptolemy）的知識與宗教神話元素<sup>6</sup>，展示了「21種怪物與神話生物的圖像，將阿拉伯與希臘世界的神話與西方的奇幻生物相融合」。<sup>7</sup>《紐倫堡編年史》可能還得到<a href="https://globus1492.gnm.de/en" target="_blank">1492年製作首個地球儀<sup>9</sup>的馬丁·貝海姆（Martin Behaim）</a><sup>8</sup>的協助。 
+                            </p>
+
+                            <p>地圖上有三種角色，取自香港科技大學圖書館收藏的地圖的<a href="https://lbezone.hkust.edu.hk/rse/wp-content/plugins/wp-imagezoom/zoom.php?id=FBn3d" target="_blank">背面</a>和<a href="https://lbezone.hkust.edu.hk/rse/wp-content/plugins/wp-imagezoom/zoom.php?id=LejJz" target="_blank">正面</a>： </p>
+                            <ul>
+                                <li>
+                                    <strong style="color: #c7b996"
+                                        >諾亞(Noah)的兒子</strong
+                                    >，代表
+                                    <strong style="color: #c7b996">非洲</strong>、
+                                    <strong style="color: #c7b996">亞洲</strong>
+                                    和
+                                    <strong style="color: #c7b996">歐洲</strong>三大洲。
+                                </li>
+                                <li>
+                                    <strong style="color: #c7b996"
+                                        >神話生物</strong
+                                    >，每種生物與最少其中一個大陸相關聯。
+                                </li>
+                                <li>
+                                    <strong style="color: #c7b996"
+                                        >吹風頭像</strong
+                                    >，每個代表一種風向。
+                                </li>
+                            </ul>
+                        </div>
+
+                        <h2 style="padding-top: 36px;font-size: 38px; line-height:1.3; font-family: 'JinghuaOldSong', 'Hiragino Kaku Gothic Pro', '微軟正黑體', '蘋果儷中黑', Helvetica, Arial, sans-serif;">參考資料</h2>
+
+                        <div class="footnotes">
+                                <p class="footnote"><sup>1</sup>麥格達倫學院（Magdalen College），〈紐倫堡編年史：世界歷史〉，https://www.magd.ox.ac.uk/blog/the-nuremberg-chronicle-a-history-of-the-world/ ，取自2025年5月30日。</p>
+                                <p class="footnote"><sup>2</sup>匹茲堡大學圖書館系統（University of Pittsburgh Library System），〈紐倫堡編年史加入館藏〉，https://library.pitt.edu/nuremberg-chronicle ，取自2025年5月30日。</p>
+                                <p class="footnote"><sup>3</sup>Hartmann Schedel（哈特曼·謝德爾），《紐倫堡編年史第一版：Liber chronicarum》（譯者：Kosta Hadavas），威斯康辛大學麥迪遜分校圖書館，2023年，頁67-71，https://search.library.wisc.edu/digital/A3SXNV3NHBQLFQ8J ，取自2025年5月30日。</p>
+                                <p class="footnote"><sup>4</sup>Hartmann Schedel（哈特曼·謝德爾）、Michael Wolgemut（邁克爾·沃爾格穆特）、Wilhelm Pleydenwurff（威廉·普萊登沃夫）、Stephan Füssel（斯特凡·菲塞爾）與 Herzogin Anna Amalia Bibliothek（安娜·阿瑪莉亞公爵夫人圖書館），編輯：Stephan Füssel（斯特凡·菲塞爾），《世界編年史：1493年完整註釋版紐倫堡編年史》，科隆：Taschen出版社，2001年，第7頁。 https://lbdiscover.hkust.edu.hk/bib/991002445149703412 。</p>
+                                <p class="footnote"><sup>5</sup>〈世界的六個時代〉，《維基百科》，2024年1月26日，https://en.wikipedia.org/w/index.php?title=Six_Ages_of_the_World&oldid=1199322681 。</p>
+                                <p class="footnote"><sup>6</sup>Finn Rose（芬恩·羅斯），〈紐倫堡編年史世界地圖〉，ArcGIS StoryMaps，2022年10月14日，https://storymaps.arcgis.com/stories/11b41beef4ce4312831429c6b9e6de9c 。</p>
+                                <p class="footnote"><sup>7</sup>Hartmann Schedel（哈特曼·謝德爾）、Michael Wolgemut（邁克爾·沃爾格穆特）、Wilhelm Pleydenwurff（威廉·普萊登沃夫）、Stephan Füssel（斯特凡·菲塞爾）與 Herzogin Anna Amalia Bibliothek（安娜·阿瑪莉亞公爵夫人圖書館），編輯：Stephan Füssel（斯特凡·菲塞爾），《世界編年史：1493年完整註釋版紐倫堡編年史》，科隆：Taschen出版社，2001年，第636頁。 https://lbdiscover.hkust.edu.hk/bib/991002445149703412 。</p>
+                                <p class="footnote"><sup>8</sup>Barry Lawrence Ruderman Antique Maps Inc.（巴里·勞倫斯·魯德曼古地圖公司），〈[拉丁文版〈紐倫堡編年史〉簡介]〉，[無日期]，https://www.raremaps.com/gallery/detail/103824/nuremberg-chronicle-liber-chronicarum-registrum-huius-ope-schedel ，取自2025年5月30日。</p>
+                                <p class="footnote"><sup>9</sup>Germanisches National Museum（德國日耳曼國家博物館），〈數位故事——1492年地球儀〉，https://globus1492.gnm.de/en ，取自2025年5月30日。</p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer"></div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const elements = document.querySelectorAll('.footnote');
+                
+                elements.forEach(element => {
+                    let text = element.innerHTML;
+                    const urlPattern = /(https?:\/\/[^\s]+)/g;
+                    text = text.replace(urlPattern, '<a href="$1" target="_blank">$1</a>');
+                    element.innerHTML = text;
+                });
+            });
+        </script>
+    </body>
+</html>

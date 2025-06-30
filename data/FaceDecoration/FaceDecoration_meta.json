@@ -1,0 +1,266 @@
+{
+    "head": [
+        {
+            "id": "E10",
+            "title": "Cynocephaly (犬首人)",
+            "content": "Dog-headed (狗頭人身)",
+            "img_path": "images/map/M08.png",
+            "model_path": "images/3D/E10.glb",
+            "anchor": 1,
+            "scale": [2.8, 3.2, 2.8],
+            "position": [0, 0.1, -0.8],
+            "rotation": [0, 0, 0],
+            "url": "all.html#W08"
+        },
+        {
+            "id": "W01",
+            "title": "Septentrio (North)(北風)",
+            "content": "Cold and cloudy wind (寒冷且多雲的風)",
+            "img_path": "images/map/W01.png",
+            "model_path": "images/3D/W01.glb",
+            "anchor": 1,
+            "scale": [2, 2.5, 2],
+            "position": [0, 0, -0.7],
+            "rotation": [0, 0, 0],
+            "url": "all.html#W01"
+        },
+        {
+            "id": "W02",
+            "title": "Aquilo (North-Northeast)(東北偏北風)",
+            "content": "Freezing, cold and cloudy wind (冰冷、寒冷且多雲的風)",
+            "img_path": "images/map/W02.png",
+            "model_path": "images/3D/W02.glb",
+            "anchorIndex": 1,
+            "scale": [2, 2.5, 2],
+            "position": [0, 0, -0.7],
+            "rotation": [0, 0, 0],
+            "url": "all.html#W02"
+        },
+        {
+            "id": "W03",
+            "title": "Circius (North-Northwest)(西北偏北風)",
+            "content": "Snow and hail (雪和冰雹)",
+            "img_path": "images/map/W03.png",
+            "model_path": "images/3D/W03.glb",
+            "anchorIndex": 1,
+            "scale": [2, 2.5, 2],
+            "position": [0, 0, -0.7],
+            "rotation": [0, 0, 0],
+            "url": "all.html#W03"
+        },
+        {
+            "id": "W04",
+            "title": "Subsolanus (East)(東風)",
+            "content": "Gentle wind (和風輕拂)",
+            "img_path": "images/map/W04.png",
+            "model_path": "images/3D/W04.glb",
+            "anchorIndex": 1,
+            "scale": [2.1, 2.5, 2.1],
+            "position": [0, 0.1, -0.7],
+            "rotation": [0, 0, 0],
+            "url": "all.html#W04"
+        },
+        {
+            "id": "W05",
+            "title": "Vulturnus (Southeast)(東南風) ",
+            "content": "Dry wind (乾燥之風)",
+            "img_path": "images/map/W05.png",
+            "model_path": "images/3D/W05.glb",
+            "anchorIndex": 1,
+            "scale": [2.2, 2.7, 2.2],
+            "position": [0, 0, -0.7],
+            "rotation": [0, 0, 0],
+            "url": "all.html#W05"
+        },
+        {
+            "id": "W06",
+            "title": "Eurus (East/Southeast)(東風/東南風) ",
+            "content": "Produces clouds (生雲)",
+            "img_path": "images/map/W06.png",
+            "model_path": "images/3D/W06.glb",
+            "anchorIndex": 1,
+            "scale": [2, 2.5, 2],
+            "position": [0, 0, -0.7],
+            "rotation": [0, 0, 0],
+            "url": "all.html#W06"
+        },
+        {
+            "id": "W07",
+            "title": "Auster (South)(南風) ",
+            "content": "Creates moisture and produces lightning (帶來濕氣，產生閃電)",
+            "img_path": "images/map/W07.png",
+            "model_path": "images/3D/W07.glb",
+            "anchorIndex": 1,
+            "scale": [2, 2.5, 2],
+            "position": [0, 0, -0.7],
+            "rotation": [0, 0, 0],
+            "url": "all.html#W07"
+        },
+        {
+            "id": "W08",
+            "title": "Libonotus (South-Southwest)(西南偏南風) ",
+            "content": "Hot wind (熱風)",
+            "img_path": "images/map/W08.png",
+            "model_path": "images/3D/W08.glb",
+            "anchorIndex": 1,
+            "scale": [2, 2.5, 2],
+            "position": [0, 0.1, -0.7],
+            "rotation": [0, 0, 0],
+            "url": "all.html#W08"
+        },
+        {
+            "id": "W09",
+            "title": "Euronotus (East-Southeast)(東南偏東風) ",
+            "content": "Warm wind (溫暖的風)",
+            "img_path": "images/map/W09.png",
+            "model_path": "images/3D/W09.glb",
+            "anchorIndex": 1,
+            "scale": [2, 2.7, 2],
+            "position": [0, 0, -0.7],
+            "rotation": [0, 0, 0],
+            "url": "all.html#W09"
+        },
+        {
+            "id": "W10",
+            "title": "Favonius (West)(西風) ",
+            "content": "Puts an end to winter, bringing forth blossoms (終結冬天，帶來花朵綻放)",
+            "img_path": "images/map/W10.png",
+            "model_path": "images/3D/W10.glb",
+            "anchorIndex": 1,
+            "scale": [2, 2.7, 2],
+            "position": [0, 0, -0.7],
+            "rotation": [0, 0, 0],
+            "url": "all.html#W10"
+        },
+        {
+            "id": "W11",
+            "title": "Africus (Southwest)(西南風) ",
+            "content": "Produces thunderstorms and clouds in masses (引發雷暴與大量雲層)",
+            "img_path": "images/map/W11.png",
+            "model_path": "images/3D/W11.glb",
+            "anchorIndex": 1,
+            "scale": [2, 2.6, 2],
+            "position": [0, 0, -0.7],
+            "rotation": [0, 0, 0],
+            "url": "all.html#W11"
+        },
+        {
+            "id": "W12",
+            "title": "Corus (Northwest)(西北風) ",
+            "content": "Varied (多變)",
+            "img_path": "images/map/W12.png",
+            "model_path": "images/3D/W12.glb",
+            "anchorIndex": 1,
+            "scale": [2, 2.6, 2],
+            "position": [0, 0, -0.7],
+            "rotation": [0, 0, 0],
+            "url": "all.html#W12"
+        }
+    ],
+    "top": [
+        {
+            "id": "E08",
+            "title": "Nephilim",
+            "content": "Red hat",
+            "img_path": "images/map/M03.png",
+            "model_path": "images/3D/E08.glb",
+            "anchor": 1,
+            "scale": [2.7, 2.7, 2.7],
+            "position": [0, -0.2, -0.6],
+            "rotation": [0, 0, 0],
+            "url": "all.html#M03"
+        },
+        {
+            "id": "E05",
+            "title": "Aegipan",
+            "content": "Goat horns",
+            "img_path": "images/map/M18.png",
+            "model_path": "images/3D/E05.glb",
+            "anchor": 1,
+            "scale": [2.7, 2.7, 2.7],
+            "position": [0, 0.1, -0.7],
+            "rotation": [0, 0, 0],
+            "url": "all.html#M18"
+        }
+    ],
+    "eye": [
+        {
+            "id": "E01",
+            "title": "Nisicathae",
+            "content": "2 additional eyes",
+            "img_path": "images/map/M06.png",
+            "model_path": "images/3D/E01.glb",
+            "anchor": 1,
+            "scale": [2.48, 2.48, 2.48],
+            "position": [0, 0, -0.72],
+            "rotation": [0, 0, 0],
+            "url": "all.html#M06"
+        },
+        {
+            "id": "E06",
+            "title": "Arimaspi",
+            "content": "single eye",
+            "img_path": "images/map/M09.png",
+            "model_path": "images/3D/E06.glb",
+            "anchor": 1,
+            "scale": [2.6, 2.6, 2.6],
+            "position": [0, 0, -0.81],
+            "rotation": [0, 0, 0],
+            "url": "all.html#M09"
+        }
+    ],
+    "mouth": [
+        {
+            "id": "E02",
+            "title": "Crane-Necked Monster",
+            "content": "bird mouth",
+            "img_path": "images/map/M07.png",
+            "model_path": "images/3D/E02.glb",
+            "anchor": 1,
+            "scale": [2.45, 2.45, 2.45],
+            "position": [0, 0.1, -0.9],
+            "rotation": [0, 0, 0],
+            "url": "all.html#M07"
+        },
+        {
+            "id": "E09",
+            "title": "Machlyes",
+            "content": "Beard",
+            "img_path": "images/map/M05.png",
+            "model_path": "images/3D/E09.glb",
+            "anchor": 1,
+            "scale": [2.4, 2.4, 2.4],
+            "position": [0, -0.02, -0.82],
+            "rotation": [0, 0, 0],
+            "url": "all.html#M05"
+        }
+    ],
+    "ear": [
+        {
+            "id": "E04",
+            "title": "Panotti",
+            "content": "big ears",
+            "img_path": "images/map/M17.png",
+            "model_path": "images/3D/E04.glb",
+            "anchor": 1,
+            "scale": [2.2, 2.2, 2.2],
+            "position": [0, 0, -0.75],
+            "rotation": [0, 0, 0],
+            "url": "all.html#M17"
+        }
+    ],
+    "wind": [
+        {
+            "id": "EW01",
+            "title": "Subsolanus",
+            "content": "Gentle wind",
+            "img_path": "images/map/W04.png",
+            "model_path": "images/3D/EW01.glb",
+            "anchor": 1,
+            "scale": [1.8, 1.8, 1.8],
+            "position": [0, 0, -0.5],
+            "rotation": [0, 0, 0],
+            "url": "all.html#W04"
+        }
+    ]
+}

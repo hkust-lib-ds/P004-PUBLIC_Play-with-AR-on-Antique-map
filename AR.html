@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,  user-scalable=no"
+        />
+
+        <title>
+            Image Tracking in AR - Augmented Reality (AR) in Antique Map | HKUST Library Digital Scholarship DS CoLab Project
+        </title>
+
+        <meta
+            name="description"
+            content="This project brings this ancient map in the HKUST Library's Special Collections to life through Augmented Reality (AR) technology. Our team has turned this historical artifact into an interactive experience, allowing you to uncover its captivating stories and secrets. We have recreated 2D and 3D objects for the characters on this map, inspiring you to learn more about their tales."
+        />
+        <meta
+            name="keywords"
+            content="AR, Augmented Reality, free AR tool, MindAR, Antique Map, Map, Secunda etas mundi, Digital Scholarship, Library, Hong Kong, HK"
+        />
+
+        <meta property="og:title" content="Image Tracking in AR - Augmented Reality (AR) in Antique Map | HKUST Library Digital Scholarship DS CoLab Project" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://library.hkust.edu.hk/ds/project/p004/map/AR.html" />
+        <meta property="og:image" content="https://library.hkust.edu.hk/ds/project/p004/map/images/preview_DS-P004.png" />
+        <meta property="og:description" content="This project brings a 1493 World map in the HKUST Library's Special Collections to life through Augmented Reality (AR) technology. Our team has turned this historical artifact into an interactive experience, allowing you to uncover its captivating stories and secrets. We have recreated 2D and 3D objects for the characters on this map, inspiring you to learn more about their tales." />
+
+        <link rel="shortcut icon" href="images/favicon/HKUST.ico" />
+        <link
+            rel="apple-touch-icon-precomposed"
+            href="images/favicon/HKUST-lib.png"
+        />
+
+        <link rel="stylesheet" href="css/lib/font-awesome.min.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css?family=Muli:200,400,500,600,700,800"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Estonia&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="css/header-footer.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/styles_AR.css" />
+
+        <script src="js/lib/jquery.min.js"></script>
+
+        <script>
+            $(function () {
+                $("#header").load("load/header.html");
+                $("#footer").load("load/footer.html");
+            });
+        </script>
+
+		<!-- head for AR page -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script src="js/lib/aframe.min.js"></script>
+		<script src="js/lib/mindar-image-aframe.prod.js"></script>
+		<script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const sceneEl = document.querySelector("a-scene");
+                let arSystem;
+                sceneEl.addEventListener("loaded", function () {
+                    arSystem = sceneEl.systems["mindar-image-system"];
+                });
+
+                const AfricaTarget = document.querySelector("#Africa-target");
+                const AfricaPlane = document.querySelector("#Africa-plane");
+                const AfricaGltf = document.querySelector("#Africa-gltf");
+
+                const AsiaTarget = document.querySelector("#Asia-target");
+                const AsiaPlane = document.querySelector("#Asia-plane");
+                const AsiaGltf = document.querySelector("#Asia-gltf");
+
+                const EuropeTarget = document.querySelector("#Europe-target");
+                const EuropePlane = document.querySelector("#Europe-plane");
+                const EuropeGltf = document.querySelector("#Europe-gltf");
+
+                const startButton = document.querySelector("#start-button");
+
+                const tutorialDiv = document.querySelector("#tutorial");
+
+                startButton.addEventListener("click", () => {
+                    console.log("start");
+                    arSystem.start(); // start AR
+                    tutorialDiv.style.display = "none"; // hide tutorial
+                });
+                // arReady event triggered when ready
+                sceneEl.addEventListener("arReady", (event) => {
+                    // console.log("MindAR is ready")
+                    const welcomeMessage = document.createElement("div");
+                    welcomeMessage.id = "welcome-message";
+                    welcomeMessage.className = "welcome";
+                    welcomeMessage.innerHTML =
+                        "Welcome to <strong>the map</strong>!";
+                    document.body.appendChild(welcomeMessage);
+                    setTimeout(() => {
+                        document.body.removeChild(welcomeMessage);
+                    }, 2000);
+                });
+                // arError event triggered when something went wrong. Mostly browser compatbility issue
+                sceneEl.addEventListener("arError", (event) => {
+                    // console.log("MindAR failed to start")
+                });
+
+                // Handle AR items dynamically
+                const continents = ["Africa", "Asia", "Europe"];
+                continents.forEach((continent) => {
+                    const plane = document.querySelector(`#${continent}-plane`);
+                    const gltf = document.querySelector(`#${continent}-gltf`);
+
+                    [plane, gltf].forEach((element) => {
+                        element.addEventListener("click", () => {
+                            console.log(`${continent} clicked`);
+                            window.location.href = `AR_${continent}.html`;
+                        });
+                    });
+                });
+            });
+        </script>
+
+		<style>
+			body {
+			  margin: 0;
+			  overflow: hidden;
+              display: flex;
+              flex-direction: column;
+              min-height: 100vh;
+			}
+			#container {
+              flex: 1;
+              position: relative;
+			}
+		  </style>
+		<!-- head for AR page -->
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WT6WLZD863"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-WT6WLZD863');
+        </script>
+
+        <script type="text/javascript">
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "s4dj817cvn");
+        </script>
+    </head>
+
+    <body>
+
+        <div id="header"></div>
+
+		<!-- body for AR page -->
+        <div class="backHomeBtn">
+            <a href="/"><i class="fa fa-home"></i></a>
+        </div>
+
+		<div id="container">
+
+            <div id="tutorial">
+                <ol>
+                    <li>Click the button below to start turning on your camera<br/>點擊下方按鈕，啟動相機功能</li>
+                    <li>Point the camera at <a target="_blank" href="https://doi.org/10.14711/spcol/b626738">this map.</a> <span style="font-size: 16px;">(You don’t have to stand in front of the physical map, you can easily access our <a target="_blank" href="https://doi.org/10.14711/spcol/b626738">digitized map</a> on your computer or other device, and point your mobile device at the digitized map image.)</span><br/>將鏡頭對準<a target="_blank" href="https://doi.org/10.14711/spcol/b626738">這張地圖</a> <span style="font-size: 16px;">(你無需親自站在實體地圖前，只需使用電腦/平板開啟<a target="_blank" href="https://doi.org/10.14711/spcol/b626738">地圖影像</a>，並持手機對準螢幕中的地圖影像即可。)</span></li>
+                    <li>Click the pop-up character on your screen to learn more about the tales of that creature<br/>點按螢幕上彈出的生物，了解更多關於該生物的傳說故事</li>
+                </ol>
+                <div id="buttons">
+                    <button id="start-button" onclick="start()">Start Exploring! <span class="btn-chi">開始！</span></button>
+                </div>
+            </div>
+
+            <a-scene
+                mindar-image="imageTargetSrc: data/mindTarget/AR_continents.mind;  maxTrack: 3; autoStart: false;"
+                color-space="sRGB"
+                renderer="colorManagement: true, physicallyCorrectLights"
+                vr-mode-ui="enabled: false"
+                device-orientation-permission-ui="enabled: false"
+            >
+                <a-assets>
+                    <img id="Africa" src="images/map/place_africa.png" />
+                    <img id="Asia" src="images/map/place_asia.png" />
+                    <img id="Europe" src="images/map/place_europe.png" />
+                    <img id="CamHamGif" src="images/2D/S2.gif" />
+                    <img id="SemShemGif" src="images/2D/S3.gif" />
+                    <img id="JaphetJaphethGif" src="images/2D/S1.gif" />
+                </a-assets>
+
+                <a-camera
+                    position="0 0 0"
+                    look-controls="enabled: false"
+                    cursor="fuse: false; rayOrigin: mouse;"
+                    raycaster="near: 10; far: 10000; objects: .clickable"
+                ></a-camera>
+
+                <a-entity
+                    id="Africa-target"
+                    mindar-image-target="targetIndex: 0"
+                >
+                    <a-plane
+                        id="Africa-plane"
+                        class="clickable"
+                        src="#Africa"
+                        position="0 0 0"
+                        height="1"
+                        width="1"
+                        rotation="-20 0 0"
+                        scale="0.9 0.9 0.9"
+                        transparent="true"
+                    ></a-plane>
+                    <a-text
+                        value="Africa: Cam/Ham"
+                        position="-0.3 -0.4 0.3"
+                        align="center"
+                        color="#FFFFFF"
+                        scale="0.3 0.3 0.3"
+                    ></a-text>
+                    <a-image
+                        id="Africa-gltf"
+                        class="clickable"
+                        rotation="10 0 0"
+                        position="0 -0 0.5"
+                        scale="0.85 0.85 0.85"
+                        src="#CamHamGif"
+                        transparent="true"
+                    ></a-image>
+                </a-entity>
+
+                <a-entity id="Asia-target" mindar-image-target="targetIndex: 1">
+                    <a-plane
+                        id="Asia-plane"
+                        class="clickable"
+                        src="#Asia"
+                        position="0 0 0"
+                        height="1"
+                        width="1"
+                        rotation="-20 0 0"
+                        scale="1.1 1.1 1.1"
+                        transparent="true"
+                    ></a-plane>
+                    <a-text
+                        value="Asia: Sem/Shem"
+                        position="0.3 -0.3 0.3"
+                        align="center"
+                        color="#FFFFFF"
+                        scale="0.3 0.3 0.3"
+                    ></a-text>
+                    <a-image
+                        id="Asia-gltf"
+                        class="clickable"
+                        rotation="10 0 0"
+                        position="0 0.3 0.5"
+                        scale="0.8 0.8 0.8"
+                        src="#SemShemGif"
+                        transparent="true"
+                    ></a-image>
+                </a-entity>
+
+                <a-entity
+                    id="Europe-target"
+                    mindar-image-target="targetIndex: 2"
+                >
+                    <a-plane
+                        id="Europe-plane"
+                        class="clickable"
+                        src="#Europe"
+                        position="0 0 0"
+                        height="1"
+                        width="1"
+                        rotation="-20 0 0"
+                        scale="1 1 1"
+                        transparent="true"
+                    ></a-plane>
+                    <a-text
+                        value="Europe: Japhet/Japheth"
+                        position="0.25 0 0.3"
+                        align="center"
+                        color="#FFFFFF"
+                        scale="0.3 0.3 0.3"
+                    ></a-text>
+                    <a-image
+                        id="Europe-gltf"
+                        class="clickable"
+                        rotation="10 0 0"
+                        position="0 0.5 0.5"
+                        scale="1.1 1.1 1.1"
+                        src="#JaphetJaphethGif"
+                        transparent="true"
+                    ></a-image>
+                </a-entity>
+            </a-scene>
+		</div>
+		<!-- body for AR page -->
+
+    </body>
+</html>

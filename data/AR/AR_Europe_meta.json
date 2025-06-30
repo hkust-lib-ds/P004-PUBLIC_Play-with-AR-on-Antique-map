@@ -1,0 +1,81 @@
+[
+    {
+      "id": "S1",
+      "name": "Japhet / Japheth (雅弗／雅弗特)",
+      "place": "Europe (歐洲)",
+      "characteristic": "The first son of Noah (挪亞的長子)",
+      "targetIndex": 1
+    }
+    ,
+    {
+      "id": "M01",
+      "name": "Gegenees (六臂人)",
+      "place": "Europe (歐洲)",
+      "characteristic": "Six arms (六隻手臂)",
+      "targetIndex": 2
+    }
+    ,
+    {
+      "id": "M04",
+      "name": "Onocentaur",
+      "place": "Europe (歐洲)",
+      "characteristic": "Half-human, half-horse [or donkey] but shown with only two feet (半人半馬[或驢]，但只有兩隻腳)",
+      "targetIndex": 3
+    }
+    ,
+    {
+      "id": "M07",
+      "name": "Crane-Necked Monster (鶴頸怪)",
+      "place": "Europe (歐洲)",
+      "characteristic": "Long neck (長脖子)",
+      "targetIndex": 4
+    }
+    ,
+    {
+      "id": "M08",
+      "name": "Cynocephaly (犬首人)",
+      "place": "Africa, Asia, Europe (非洲、亞洲、歐洲)",
+      "characteristic": "Dog-headed (狗頭人身)",
+      "targetIndex": 5
+    }
+    ,
+    {
+      "id": "M09",
+      "name": "Arimaspi",
+      "place": "Eastern Europe (東歐)",
+      "characteristic": "One-eyed (獨眼)",
+      "targetIndex": 6
+    }
+    ,
+    {
+      "id": "M12",
+      "name": "Amazons (亞馬遜族)",
+      "place": "Anywhere (世界各地)",
+      "characteristic": "Androgynous or double-sexed, Burnt right chest (雌雄同體或雙性特徵, 燒毀的右胸)",
+      "targetIndex": 7
+    }
+    ,
+    {
+      "id": "M17",
+      "name": "Panotti (巨耳人 / 帕諾蒂族)",
+      "place": "Europe (歐洲)",
+      "characteristic": "Large ears (巨大的耳朵)",
+      "targetIndex": 8
+    }
+    ,
+    {
+      "id": "M18",
+      "name": "Aegipan (山羊潘)",
+      "place": "Europe (歐洲)",
+      "characteristic": "Half-goat, half-human (半羊半人)",
+      "targetIndex": 9
+    }
+    ,
+    {
+      "id": "M20",
+      "name": "Hippopodes (馬足人)",
+      "place": "Europe (歐洲)",
+      "characteristic": "Horse-footed (馬蹄足)",
+      "targetIndex": 0
+    }
+  ]

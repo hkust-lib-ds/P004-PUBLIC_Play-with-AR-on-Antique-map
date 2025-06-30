@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,  user-scalable=no"
+        />
+
+        <title>
+            All Creatures in the Map - Tales from a 1493 World Map: Playing with Augmented Reality (AR) | HKUST Library Digital Scholarship DS CoLab Project
+        </title>
+
+        <meta
+            name="description"
+            content="This project brings this ancient map in the HKUST Library's Special Collections to life through Augmented Reality (AR) technology. Our team has turned this historical artifact into an interactive experience, allowing you to uncover its captivating stories and secrets. We have recreated 2D and 3D objects for the characters on this map, inspiring you to learn more about their tales."
+        />
+        <meta
+            name="keywords"
+            content="AR, Augmented Reality, free AR tool, MindAR, Antique Map, Map, Secunda etas mundi, Digital Scholarship, Library, Hong Kong, HK"
+        />
+
+        <meta property="og:title" content="Tales from a 1493 World Map: Playing with Augmented Reality (AR) | HKUST Library Digital Scholarship DS CoLab Project" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://library.hkust.edu.hk/ds/project/p004/map/all.html" />
+        <meta property="og:image" content="https://library.hkust.edu.hk/ds/project/p004/map/images/preview_DS-P004.png" />
+        <meta property="og:description" content="This project brings a 1493 World map in the HKUST Library's Special Collections to life through Augmented Reality (AR) technology. Our team has turned this historical artifact into an interactive experience, allowing you to uncover its captivating stories and secrets. We have recreated 2D and 3D objects for the characters on this map, inspiring you to learn more about their tales." />
+
+        <link rel="shortcut icon" href="images/favicon/HKUST.ico" />
+        <link
+            rel="apple-touch-icon-precomposed"
+            href="../images/favicon/HKUST-lib.png"
+        />
+
+        <link rel="stylesheet" href="../css/lib/font-awesome.min.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css?family=Muli:200,400,500,600,700,800"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Estonia&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="css/lib/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/header-footer.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/styles_index.css" />
+        <link rel="stylesheet" href="css/styles_all_static.css" />
+
+        <script src="js/lib/jquery.min.js"></script>
+        <script>
+            $(function () {
+                $("#header").load("load/header.html");
+                $("#footer").load("load/footer.html");
+            });
+        </script>
+
+        <script src="js/scripts_all_fetchStaticData.js"></script>
+
+
+        <!-- whenever resize the browser window, refresh the page -->
+        <script>
+            window.onresize = function() {
+                location.reload();
+            };
+        </script>
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WT6WLZD863"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-WT6WLZD863');
+        </script>
+
+        <script type="text/javascript">
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "s4dj817cvn");
+        </script>
+    </head>
+
+    <body>
+        <div id="header"></div>
+
+        <div style="margin-top:60px;margin-left:20px;display: inline-block; padding: 5px 10px;background-color: #c7b996;border-radius: 8px;"><a style="color:rgb(78, 63, 23)!important;" href="AR.html"><i class="fa fa-mobile"></i> Image Tracking in AR</a></div>
+        <br/>
+        <div style="margin-top:10px;margin-left:20px;display: inline-block; padding: 5px 10px;background-color: #c7b996;border-radius: 8px;"><a style="color:rgb(78, 63, 23)!important;" href="FaceDeco.html"><i class="fa fa-smile-o"></i> Face Tracking in AR</a></div>
+
+        <div id="h1Text"></div>
+
+        <div id="pText"></div>
+
+        <div id="clickableMap_front"></div>
+        <div id="clickableMap_verso"></div>
+
+        <div id="h1Text"></div>
+
+        <div id="fetchContent"></div>
+        <div id="fetchContent_ind"></div>
+
+        <!-- <div id="footer"></div> -->
+         
+
+    </body>
+</html>

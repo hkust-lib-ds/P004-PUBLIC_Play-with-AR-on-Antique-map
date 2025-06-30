@@ -1,0 +1,81 @@
+[
+    {
+      "id": "S3",
+      "name": "Shem / Sem (閃)",
+      "place": "Asia (亞洲)",
+      "characteristic": "The son of Noah (挪亞的兒子)",
+      "targetIndex": 2
+    }
+    ,
+    {
+      "id": "M03",
+      "name": "Nephilim (拿非利)",
+      "place": "Asia (亞洲)",
+      "characteristic": "Twelve Fingers (十二根手指)",
+      "targetIndex": 3
+    }
+    ,
+    {
+      "id": "M08",
+      "name": "Cynocephaly (犬首人)",
+      "place": "Africa, Asia, Europe (非洲、亞洲、歐洲)",
+      "characteristic": "Dog-headed (狗頭人身)",
+      "targetIndex": 4
+    }
+    ,
+    {
+      "id": "M10",
+      "name": "Akephaloi / Blemmyes (無首族 / 布勒米耶族)",
+      "place": "Africa, Asia (非洲、亞洲)",
+      "characteristic": "Headlessd (無頭)",
+      "targetIndex": 5
+    }
+    ,
+    {
+      "id": "M11",
+      "name": "Nuloi / Abarimon (努洛伊人 / 阿巴里蒙族)",
+      "place": "Asia (亞洲)",
+      "characteristic": "Backward-facing feet, eight-toed (腳掌向後，八趾)",
+      "targetIndex": 6
+    }
+    ,
+    {
+      "id": "M12",
+      "name": "Amazons (亞馬遜族)",
+      "place": "Anywhere (世界各地)",
+      "characteristic": "Androgynous or double-sexed, Burnt right chest (雌雄同體或雙性特徵, 燒毀的右胸)",
+      "targetIndex": 7
+    }
+    ,
+    {
+      "id": "M13",
+      "name": "Monopod (獨足族)",
+      "place": "Africa, Asia (非洲、亞洲)",
+      "characteristic": "Single large foot, Hairy body (單隻巨大的腳，全身長滿濃密的毛發)",
+      "targetIndex": 8
+    }
+    ,
+    {
+      "id": "M14",
+      "name": "Astomi (阿斯托米族)",
+      "place": "Asia (亞洲)",
+      "characteristic": "Small mouth (嘴巴極小)",
+      "targetIndex": 9
+    }
+    ,
+    {
+      "id": "M15",
+      "name": "Sciritae (斯基利泰人)",
+      "place": "Asia (亞洲)",
+      "characteristic": "No nose (沒有鼻子)",
+      "targetIndex": 0
+    }
+    ,
+    {
+      "id": "M21",
+      "name": "Pygmies (矮人族 / 俾格米人)",
+      "place": "Africa, Asia (非洲、亞洲)",
+      "characteristic": "Short stature (身材矮小)",
+      "targetIndex": 1
+    }
+  ]

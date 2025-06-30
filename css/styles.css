@@ -1,0 +1,161 @@
+:root {
+    --yellow-color: #f5cc4a;
+    --blue-color: #003366;
+    --black-color: #2c2c2c;
+    --body-color: #151515;
+    --text-color: #e2e2e2;
+}
+
+@font-face {
+    font-family: 'JinghuaOldSong';
+    src: url('fonts/JinghuaOldSong_v2_002.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*=============== BASIC ===============*/
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+    font-family: "Muli", Roboto, sans-serif;
+    font-size: 15px;
+    height: 100vh;
+    min-height: 100vh;
+    min-width: 310px;
+    color: #fff;
+    background: var(--body-color);
+    position: relative;
+}
+
+a {
+    color: #eab500;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fa7a7a;
+}
+
+button {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    cursor: pointer;
+    width: 300px;
+    height: 85px;
+    transition: 0.3s;
+    font-family: "Estonia", 'JinghuaOldSong', 'Hiragino Kaku Gothic Pro', '微軟正黑體', '蘋果儷中黑', Helvetica, Arial, sans-serif;
+    font-size: 42px;
+}
+
+.btn-chi {
+    font-family: 'JinghuaOldSong', 'Hiragino Kaku Gothic Pro', '微軟正黑體', '蘋果儷中黑', Helvetica, Arial, sans-serif;
+    font-size: 28px;
+}
+
+button:hover {
+    background-color: #543e0a;
+    box-shadow: 0 0 0 5px #3c2f10;
+    border: none;
+    color: #c8b996;
+}
+
+.backHomeBtn {
+    background-color: #8c4e0b;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 55px;
+    height: 55px;
+    font-size: 20px;
+    padding: 15px 20px 20px 18px;
+    margin: 20px;
+    transform: translate(-20%, 50%);
+    z-index: 99999;
+}
+
+/*=============== FONT ===============*/
+
+.estonia-regular {
+    font-family: "Estonia", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.tinos-regular {
+    font-family: "Tinos", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.tinos-bold {
+    font-family: "Tinos", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.tinos-regular-italic {
+    font-family: "Tinos", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.tinos-bold-italic {
+    font-family: "Tinos", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.chinese-version {
+    font-family: 'JinghuaOldSong', 'Hiragino Kaku Gothic Pro', '微軟正黑體', '蘋果儷中黑', Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-family: "Estonia";
+    font-size: 84px;
+    color: #c7b996;
+    text-shadow: 2px 2px #000;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 30px;
+    line-height: 0.8;
+}
+
+.chinese-version h1 {
+    font-size: 52px;
+}
+
+h2 {
+    font-family: "Estonia";
+    font-size: 52px;
+    color: #c7b996;
+}
+
+.footnotes {
+    font-size: 12px;
+}
+
+sup {
+    font-size: 10px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+@media screen and (max-width: 700px) {
+    h1 {
+        font-size: 52px;
+        padding-top: 120px;
+    }
+    .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .chinese-version h1 {
+        font-size: 32px;
+    }
+}

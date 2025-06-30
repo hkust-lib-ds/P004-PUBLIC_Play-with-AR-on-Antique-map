@@ -1,0 +1,262 @@
+/*=============== Basic - additional ===============*/
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Tinos", serif;
+    font-size: 24px;
+}
+
+#tutorial {
+    z-index: 1000;
+    line-height: 1.4;
+    font-size: 22px;
+    color: black;
+    background-color: white;
+    max-width: 700px;
+    width: 100vw;
+    margin: 0 auto; 
+    padding: 40px; 
+    border-radius: 8px; 
+    overflow-y: auto;
+    max-height: 90vh;
+    height: 1700px;
+}
+
+li {
+    padding-bottom: 10px;
+}
+
+#header {
+    z-index: 1;
+}
+
+#footer {
+    z-index: 1;
+}
+
+#container {
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    /* position: relative;
+    overflow: hidden; */
+}
+/* #video-feed {
+position: fixed;
+bottom: 0;
+left: 0;
+width: 50vw;
+z-index: 9999999;
+} */
+
+/*=============== Side panel ===============*/
+#side-panel {
+    position: absolute;
+    top: 180px; /* Ensure it's below the header */
+    bottom: 105px; /* Keep space above the footer */
+    left: 0;
+    width: 16%;
+    z-index: 2;
+    overflow-y: auto;
+    background: #f9f9f9; 
+    border: 1px solid #ddd; 
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px; 
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px; 
+    color: #333; 
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; 
+}
+
+.avatar-toggle {
+    flex: 1 1 50px; 
+    max-width: 50px; 
+    padding: 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: transform 0.2s; 
+}
+
+.avatar-toggle img {
+    width: 50px; 
+    height: 50px; 
+    object-fit: cover;
+    border-radius: 5px; 
+}
+
+.avatar-toggle:hover {
+    transform: scale(1.1); 
+}
+
+/*=============== Text box ===============*/
+
+/* Style for the overlay text */
+.overlay-text {
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    color: #333;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    max-width: 230px;
+    text-align: left;
+    opacity: 0; /* Transparent text box -> hidden by default */
+    transition: opacity 0.3s ease;
+    pointer-events: none; 
+}
+
+.overlay-text.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.overlay-text a {
+    color: #ac8505;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.overlay-text a:hover {
+    text-decoration: underline;
+}
+
+#overlay-text.visible {
+    display: block;
+}
+
+
+/* Hide side-panel and overlay-text by default on small screens */
+@media screen and (max-width: 600px) {
+    #side-panel {
+        display: none;
+    }
+
+    #overlay-text {
+        display: none;
+    }
+
+    .responsive-controls .icon {
+        display: block;
+        cursor: pointer;
+        margin: 10px;
+        font-size: 18px;
+        color: #333;
+    }
+}
+
+.sidepanel_left {
+    background-color: #8c4e0b;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    height: 55px;
+    font-size: 16px;
+    padding: 15px 10px 5px 10px;
+    transform: translate(-20%, 50%);
+    z-index: 99999;
+    position: fixed;
+    top: 20px;
+    left: 100px;
+}
+
+.sidepanel_right {
+    background-color: #8c4e0b;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    height: 55px;
+    font-size: 16px;
+    padding: 15px 10px 5px 10px;
+    transform: translate(-20%, 50%);
+    z-index: 99999;
+    position: fixed;
+    top: 85px;
+    left: 100px;
+}
+
+
+
+#download-btn {
+    position: fixed;
+    top: 120px;
+    right: 20px;
+    z-index: 9999;
+    padding: 2px 2px;
+    background: #fff;
+    border: 2px solid #222;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    width: 160px;
+    height: 60px;
+    font-family: "Tinos", serif;
+}
+
+#download-btn:hover {
+    background: #f5f5f5;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+#download-btn-AR {
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    z-index: 9999;
+    padding: 2px 2px;
+    background: #fff;
+    border: 2px solid #222;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    width: 160px;
+    height: 60px; 
+    font-family: "Tinos", serif;
+}
+
+#download-btn-AR:hover {
+    background: #f5f5f5;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+
+.privacy-notice {
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.55em;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 6px 0;
+    z-index: 9999;
+    pointer-events: none;
+    border-radius: 6px 6px 0 0;
+    letter-spacing: 0.02em;
+}

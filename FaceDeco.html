@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,  user-scalable=no"
+        />
+
+        <title>
+            Face Tracking in AR - Tales from a 1493 World Map: Playing with Augmented Reality (AR) | HKUST Library Digital Scholarship DS CoLab Project
+        </title>
+
+        <meta
+            name="description"
+            content="This project brings this ancient map in the HKUST Library's Special Collections to life through Augmented Reality (AR) technology. Our team has turned this historical artifact into an interactive experience, allowing you to uncover its captivating stories and secrets. We have recreated 2D and 3D objects for the characters on this map, inspiring you to learn more about their tales."
+        />
+        <meta
+            name="keywords"
+            content="AR, Augmented Reality, free AR tool, MindAR, Antique Map, Map, Secunda etas mundi, Digital Scholarship, Library, Hong Kong, HK"
+        />
+
+        <meta property="og:title" content="Face Tracking in AR - Tales from a 1493 World Map: Playing with Augmented Reality (AR) | HKUST Library Digital Scholarship DS CoLab Project" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://library.hkust.edu.hk/ds/project/p004/map/FaceDeco.html" />
+        <meta property="og:image" content="https://library.hkust.edu.hk/ds/project/p004/map/images/preview_DS-P004.png" />
+        <meta property="og:description" content="This project brings a 1493 World map in the HKUST Library's Special Collections to life through Augmented Reality (AR) technology. Our team has turned this historical artifact into an interactive experience, allowing you to uncover its captivating stories and secrets. We have recreated 2D and 3D objects for the characters on this map, inspiring you to learn more about their tales." />
+
+        <link rel="shortcut icon" href="images/favicon/HKUST.ico" />
+        <link
+            rel="apple-touch-icon-precomposed"
+            href="images/favicon/HKUST-lib.png"
+        />
+
+        <link rel="stylesheet" href="css/lib/font-awesome.min.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css?family=Muli:200,400,500,600,700,800"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Estonia&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="css/header-footer.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/styles_FaceDecoration.css" />
+
+        <script src="js/lib/jquery.min.js"></script>
+
+        <script>
+            $(function () {
+                $("#header").load("load/header.html");
+            });
+        </script>
+
+        <script type="importmap">
+            {
+                "imports": {
+                    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/",
+                    "mindar-face-three": "https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-face-three.prod.js"
+                }
+            }
+        </script>
+
+        <!-- Import script for Blendshapes -->
+        <script type="module" src="js/scripts_FaceDecoration.js"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Hide the side panel initially
+                const sidePanel = document.querySelector("#side-panel");
+                sidePanel.style.display = "none";
+            });
+        </script>
+        <script>
+            function toggleSidePanel() {
+                const sidePanel = document.getElementById("side-panel");
+                if (
+                    sidePanel.style.display === "none" ||
+                    sidePanel.style.display === ""
+                ) {
+                    sidePanel.style.display = "block";
+                } else {
+                    sidePanel.style.display = "none";
+                }
+            }
+
+            function toggleOverlayText() {
+                const overlayText = document.getElementById("overlay-text");
+                if (
+                    overlayText.style.display === "none" ||
+                    overlayText.style.display === ""
+                ) {
+                    overlayText.style.display = "block";
+                } else {
+                    overlayText.style.display = "none";
+                }
+            }
+        </script>
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WT6WLZD863"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-WT6WLZD863');
+        </script>
+
+        <script type="text/javascript">
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "s4dj817cvn");
+        </script>
+    </head>
+
+    <body>
+        <div id="header"></div>
+        <!-- tutorial and start button-->
+
+        <div class="backHomeBtn">
+            <a href="/"><i class="fa fa-home"></i></a>
+        </div>
+
+        <div id="tutorial">
+            <ol>
+                <li>Click the button below to start turning on your camera<br/>點擊下方按鈕，啟動相機功能</li>
+                <li>Point the camera at your face or someone else’s face<br/>將鏡頭對準你的臉或別人的臉</li>
+                <li>From the left panel, pick the map creatures to overlay their unique traits on your face.<br/>在左側面板選擇你感興趣的地圖生物，讓它們的特色疊加在你的臉上</li>
+                <li>You can click the links on the right panel to learn more about the map creature<br/>點擊右側面板的連結了解更多該地圖生物的故事</li>
+            </ol>
+            <div id="buttons">
+                <button id="start-button" onclick="start()">Start Exploring! <span class="btn-chi">開始！</span></button>
+            </div>
+        </div>
+
+        <!-- AR scene -->
+        <div id="container"></div>
+
+        <div class="responsive-controls" style="display:none;">
+            <a
+                href="javascript:void(0);"
+                class="icon sidepanel_left"
+                onclick="toggleSidePanel()"
+            >
+                <i class="fa fa-bars"></i> &nbsp; Left Panel
+            </a>
+            <a
+                href="javascript:void(0);"
+                class="icon sidepanel_right"
+                onclick="toggleOverlayText()"
+            >
+                <i class="fa fa-bars"></i> &nbsp; Right Panel
+            </a>
+        </div>
+
+        <button id="download-btn" style="display:none;"><i class="fa fa-camera"></i> Download</button>
+        <button id="download-btn-AR" style="display:none;"><i class="fa fa-cube"></i> Download</button>
+
+        <!-- Options panel (will be dynamically generated) -->
+        <div id="side-panel"></div>
+
+        <!-- Placeholder for displaying selected messages -->
+        <div id="overlay-text" class="overlay-text"></div>
+
+        <!-- Transparent privacy notice -->
+        <div class="privacy-notice">
+            No data or information is kept on our server when you use this Face Tracking function.
+        </div>
+
+    </body>
+</html>
