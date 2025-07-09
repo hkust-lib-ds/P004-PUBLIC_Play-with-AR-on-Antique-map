@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/1008250258.svg)](https://doi.org/10.5281/zenodo.15845526)
+
 _HKUST Library - DS CoLab Project - P004_
 # Tales from a 1493 World Map: Playing with AR
 
